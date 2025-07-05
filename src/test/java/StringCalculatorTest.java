@@ -36,4 +36,9 @@ public class StringCalculatorTest {
         assertEquals(1 + 2 + 3, calculator.add("1\n2,3"));
     }
 
+    @Test
+    public void add_should_returnSum_whenCustomSingleCharDelimiterUsed() {
+        assertEquals(2 + 3, calculator.add("//;\n2;3"));
+    }
+
 }
