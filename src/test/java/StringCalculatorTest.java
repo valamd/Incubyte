@@ -41,4 +41,9 @@ public class StringCalculatorTest {
         assertEquals(2 + 3, calculator.add("//;\n2;3"));
     }
 
+    @Test
+    public void add_should_returnSum_whenCustomDelimiterHasAnyLength() {
+        assertEquals(6, calculator.add("//[***]\n1***2***3"));
+    }
+
 }
