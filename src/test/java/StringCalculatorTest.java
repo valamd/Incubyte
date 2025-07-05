@@ -50,4 +50,19 @@ public class StringCalculatorTest {
     public void add_should_returnSum_whenMultipleCustomDelimitersGiven() {
         assertEquals(6, calculator.add("//[*][%]\n1*2%3"));
     }
+
+    @Test
+    public void add_should_returnSum_whenDelimitersHaveDifferentLengths() {
+        assertEquals(6, calculator.add("//[**][%%]\n1**2%%3"));
+    }
+
+    @Test
+    public void add_shouldThrowException_whenNegativeNumbersExist() {
+        try {
+            calculator.add("1,-2,3,-4");
+            fail("Exception expected for negative numbers");
+        } catch (IllegalArgumentException e) {
+            assertEquals("Negative numbers not allowed: -2, -4", e.getMessage());
+        }
+    }
 }
