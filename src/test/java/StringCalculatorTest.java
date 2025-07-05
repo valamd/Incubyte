@@ -71,5 +71,9 @@ public class StringCalculatorTest {
         assertEquals(2, calculator.add("2,1001"));
     }
 
+    @Test
+    public void add_shouldSumOnlyUniqueNumbers_whenDuplicatesArePresent() {
+        assertEquals(1 + 2 + 3, calculator.add("1,2,2,3,3,3"));
+    }
 
 }
