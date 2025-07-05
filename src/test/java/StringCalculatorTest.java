@@ -46,4 +46,8 @@ public class StringCalculatorTest {
         assertEquals(6, calculator.add("//[***]\n1***2***3"));
     }
 
+    @Test
+    public void add_should_returnSum_whenMultipleCustomDelimitersGiven() {
+        assertEquals(6, calculator.add("//[*][%]\n1*2%3"));
+    }
 }
