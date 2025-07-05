@@ -2,7 +2,7 @@
 
 This project implements a **String Calculator** using **Test-Driven Development (TDD)** in Java.
 
-## Features Covered 
+## Features Covered (Test Case)
 
 => Returns `0` for an empty string  
 => Returns number itself for a single number  
