@@ -31,5 +31,9 @@ public class StringCalculatorTest {
         assertEquals(3 + 5, calculator.add("3,5"));
     }
 
+    @Test
+    public void add_should_returnSum_whenInputHasCommasAndNewlines() {
+        assertEquals(1 + 2 + 3, calculator.add("1\n2,3"));
+    }
 
 }
