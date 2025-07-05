@@ -25,4 +25,10 @@ public class StringCalculatorTest {
     public void add_should_returnNumber_whenSingleNumberGiven() {
         assertEquals(5, calculator.add("5"));
     }
+
+    @Test
+    public void add_should_returnSum_whenTwoNumbersCommaDelimited() {
+        assertEquals(3 + 5, calculator.add("3,5"));
+    }
+
 }
